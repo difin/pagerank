@@ -56,7 +56,7 @@ public class MainDriver {
 
     private void buildPageGraph(){
         pageGraph.build(links);
-        pageRank.runPageRank(pageGraph, 0.85f, 1);
+        pageRank.runPageRank(pageGraph, 0.65f, 20);
         output = pageGraph.getReportLines();
     }
 

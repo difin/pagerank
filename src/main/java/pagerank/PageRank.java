@@ -13,9 +13,8 @@ public class PageRank {
 
                 float rank = (1-dumpingFactor);
 
-                for (String referencedPageName : page.getReferencedPageNames()){
-                    Page referencedPage = pageGraph.getPage(referencedPageName);
-                    rank = rank + dumpingFactor*referencedPage.getRank()/referencedPage.getNumberOfReferencedPages();
+                for (Page outboundPage : page.getOutboundPages()){
+                    rank = rank + dumpingFactor*outboundPage.getRank()/outboundPage.getNumberOfOutboundPages();
                 }
 
                 page.setRank(rank);

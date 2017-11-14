@@ -6,12 +6,12 @@ import java.util.List;
 public class Page {
 
     private String name;
-    private List<String> referencedPageNames;
+    private List<Page> outboundPages;
     private float rank;
 
     public Page(String name){
         this.name = name;
-        referencedPageNames = new ArrayList<>();
+        outboundPages = new ArrayList<>();
         rank = 1.0f;
     }
 
@@ -19,12 +19,12 @@ public class Page {
         return name;
     }
 
-    public List<String> getReferencedPageNames() {
-        return referencedPageNames;
+    public List<Page> getOutboundPages() {
+        return outboundPages;
     }
 
-    public void addReferencedPage(String page){
-        referencedPageNames.add(page);
+    public void addOutboundPage(Page page){
+        outboundPages.add(page);
     }
 
     public float getRank() {
@@ -35,7 +35,7 @@ public class Page {
         this.rank = rank;
     }
 
-    public int getNumberOfReferencedPages(){
-        return referencedPageNames.size();
+    public int getNumberOfOutboundPages(){
+        return outboundPages.size();
     }
 }
