@@ -28,13 +28,13 @@ public class FileUtils {
         }
     }
 
-    public static void listToFile(String fileName, List<Integer> outputList){
+    public static void listToFile(String fileName, List<String> outputList){
 
         try(BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName))){
 
             for (int i=0; i<outputList.size(); i++){
-                Integer line = outputList.get(i);
-                bufferedWriter.write(line.toString());
+                String line = outputList.get(i);
+                bufferedWriter.write(line);
 
                 if (i<outputList.size()-1){
                     bufferedWriter.newLine();

@@ -14,8 +14,10 @@ public class MainDriver {
     private String outputFile;
 
     private PageGraph pageGraph;
+    private PageRank pageRank;
+
     private List<String> links;
-    private List<Integer> output;
+    private List<String> output;
 
     public static void main(String[] args) throws IOException {
         MainDriver mainDriver = new MainDriver();
@@ -24,8 +26,10 @@ public class MainDriver {
 
     public MainDriver(){
         pageGraph = new PageGraph();
+        pageRank = new PageRank();
+
         stringFile = "links.txt";
-        outputFile = "output.txt";
+        outputFile = "Output.txt";
     }
 
     public MainDriver(String directory, String outputFile) {
@@ -35,6 +39,7 @@ public class MainDriver {
 
     public void runPageRank(){
         readFilesIntoMemory();
+        buildPageGraph();
         createOutputFile(output);
     }
 
@@ -51,9 +56,11 @@ public class MainDriver {
 
     private void buildPageGraph(){
         pageGraph.build(links);
+        pageRank.runPageRank(pageGraph, 0.85f, 1);
+        output = pageGraph.getReportLines();
     }
 
-    private void createOutputFile(List<Integer> output){
+    private void createOutputFile(List<String> output){
 
         StopWatch timer = new StopWatch();
         timer.start();
