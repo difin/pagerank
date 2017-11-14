@@ -11,7 +11,7 @@ public class PageRank {
         for (int i=0; i<iterations; i++){
             for (Page page : pageGraph.getPages()){
 
-                float rank = (1-dumpingFactor);
+                float rank = (1.0f - dumpingFactor);
 
                 for (Page outboundPage : page.getOutboundPages()){
                     rank = rank + dumpingFactor*outboundPage.getRank()/outboundPage.getNumberOfOutboundPages();
