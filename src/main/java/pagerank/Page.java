@@ -7,11 +7,13 @@ public class Page {
 
     private String name;
     private List<Page> outboundPages;
+    private List<Page> inboundPages;
     private float rank;
 
     public Page(String name){
         this.name = name;
         outboundPages = new ArrayList<>();
+        inboundPages = new ArrayList<>();
         rank = 1.0f;
     }
 
@@ -37,5 +39,13 @@ public class Page {
 
     public int getNumberOfOutboundPages(){
         return outboundPages.size();
+    }
+
+    public List<Page> getInboundPages() {
+        return inboundPages;
+    }
+
+    public void addInboundPage(Page inboundPage) {
+        inboundPages.add(inboundPage);
     }
 }
