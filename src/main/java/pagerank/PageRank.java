@@ -6,9 +6,11 @@ public class PageRank {
 
     }
 
-    public void runPageRank(PageGraph pageGraph, float dumpingFactor, int iterations){
+    public int runPageRank(PageGraph pageGraph, float dumpingFactor, int maxIterations){
 
-        for (int i=0; i<iterations; i++){
+        pageGraph.resetRankChangeFlags();
+
+        for (int i=0; i<maxIterations; i++){
             for (Page page : pageGraph.getPages()){
 
                 float rank = (1.0f - dumpingFactor);
@@ -19,6 +21,12 @@ public class PageRank {
 
                 page.setRank(rank);
             }
+
+            if (!pageGraph.isRanksChanged()){
+                return i;
+            }
         }
+
+        return maxIterations;
     }
 }

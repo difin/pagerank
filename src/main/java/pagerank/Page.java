@@ -9,6 +9,7 @@ public class Page {
     private List<Page> outboundPages;
     private List<Page> inboundPages;
     private float rank;
+    private boolean rankChanged;
 
     public Page(String name){
         this.name = name;
@@ -34,6 +35,14 @@ public class Page {
     }
 
     public void setRank(float rank) {
+
+        if (this.rank == rank){
+            rankChanged = false;
+        }
+        else{
+            rankChanged = true;
+        }
+
         this.rank = rank;
     }
 
@@ -47,5 +56,13 @@ public class Page {
 
     public void addInboundPage(Page inboundPage) {
         inboundPages.add(inboundPage);
+    }
+
+    public boolean isRankChanged() {
+        return rankChanged;
+    }
+
+    public void setRankChanged(boolean rankChanged) {
+        this.rankChanged = rankChanged;
     }
 }

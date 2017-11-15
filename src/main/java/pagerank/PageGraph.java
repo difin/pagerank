@@ -88,4 +88,22 @@ public class PageGraph {
             return rank2 < rank1 ? -1 : rank2 == rank1 ? 0 : 1;
         }
     }
+
+    public void resetRankChangeFlags(){
+
+        for (Page page : getPages()){
+            page.setRankChanged(true);
+        }
+    }
+
+    public boolean isRanksChanged(){
+
+        for (Page page : getPages()){
+            if (page.isRankChanged()){
+                return true;
+            }
+        }
+
+        return false;
+    }
 }

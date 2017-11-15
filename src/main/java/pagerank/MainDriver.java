@@ -56,7 +56,10 @@ public class MainDriver {
 
     private void buildPageGraph(){
         pageGraph.build(links);
-        pageRank.runPageRank(pageGraph, 0.85f, 20);
+        int iterationsDone = pageRank.runPageRank(pageGraph, 0.85f, 20);
+
+        System.out.println("PageRank finished after " + iterationsDone + " iterations");
+
         output = pageGraph.getReportLines();
     }
 
