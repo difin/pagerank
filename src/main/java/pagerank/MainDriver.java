@@ -21,7 +21,7 @@ public class MainDriver {
 
     public static void main(String[] args) throws IOException {
         MainDriver mainDriver = new MainDriver();
-        mainDriver.runPageRank();
+        mainDriver.run();
     }
 
     public MainDriver(){
@@ -37,9 +37,10 @@ public class MainDriver {
         this.outputFile = directory + "/" + outputFile;
     }
 
-    public void runPageRank(){
+    public void run(){
         readFilesIntoMemory();
         buildPageGraph();
+        runPageRank();
         createOutputFile(output);
     }
 
@@ -56,11 +57,18 @@ public class MainDriver {
 
     private void buildPageGraph(){
         pageGraph.build(links);
+    }
+
+    private void runPageRank(){
+
+        StopWatch timer = new StopWatch();
+        timer.start();
+
         int iterationsDone = pageRank.runPageRank(pageGraph, 0.85f, 20);
 
-        System.out.println("PageRank finished after " + iterationsDone + " iterations");
+        timer.stop();
 
-        output = pageGraph.getReportLines();
+        System.out.println("PageRank finished after " + iterationsDone + " iterations; convergence time: " + timer.toString());
     }
 
     private void createOutputFile(List<String> output){
@@ -68,7 +76,7 @@ public class MainDriver {
         StopWatch timer = new StopWatch();
         timer.start();
 
-        FileUtils.listToFile(outputFile, output);
+        FileUtils.listToFile(outputFile, pageGraph.getReportLines());
 
         timer.stop();
         System.out.println("Output file writing time: " + timer.toString());
