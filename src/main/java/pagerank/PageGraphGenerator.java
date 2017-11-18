@@ -53,7 +53,7 @@ public class PageGraphGenerator {
 
     public static void main(String[] args){
         PageGraphGenerator pageGraphGenerator = new PageGraphGenerator();
-        pageGraphGenerator.generate("src/test/resources/test_data/links.100k.txt",
+        pageGraphGenerator.generate("src/test/resources/test_data/links.67k.txt",
                 100000,
                 10,
                 5 );

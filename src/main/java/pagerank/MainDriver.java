@@ -56,8 +56,9 @@ public class MainDriver {
         this.outputFile = directory + "/" + outputFileName;
     }
 
-    public MainDriver(String inputFileFolder, String inputFileName, String outputFileFolder,
-                      String outputFileName, float scalingFactor, int maxIterations) {
+    public MainDriver(String inputFileFolder, String inputFileName,
+                      String outputFileFolder, String outputFileName,
+                      float scalingFactor, int maxIterations) {
 
         pageGraph = new PageGraph();
         pageRank = new PageRank();
