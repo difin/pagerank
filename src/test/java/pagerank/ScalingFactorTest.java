@@ -15,17 +15,16 @@ public class ScalingFactorTest {
 
     private String resourcesDirectoryPath = new File("src/test/resources").getAbsolutePath();
 
-    public void runTest(String inputFileFolder, String inputFileName, String outputFileFolder, float scalingFactor, int maxIterations){
+    public void runTest(String inputFileFolder, String inputFileName, String outputFileFolder, String outputFileName, float scalingFactor, int maxIterations){
 
         String inputFileFolderFullPath = resourcesDirectoryPath + "/" + inputFileFolder;
         String outputFileFolderFullPath = resourcesDirectoryPath + "/" + outputFileFolder;
-        String outputFile = "Output.txt";
 
-        File outpuFileOnDisk = new File(inputFileFolderFullPath + "/" + outputFile);
+        File outpuFileOnDisk = new File(inputFileFolderFullPath + "/" + outputFileName);
         outpuFileOnDisk.delete();
 
         MainDriver mainDriver = new MainDriver( inputFileFolderFullPath, inputFileName,
-                                                outputFileFolderFullPath, outputFile,
+                                                outputFileFolderFullPath, outputFileName,
                                                 scalingFactor, maxIterations);
         mainDriver.run();
     }
@@ -42,26 +41,26 @@ public class ScalingFactorTest {
 
     @Test
     public void inputFileWith33kLinksScalingFactor055Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","size_33k_scaling_factor_0.55", 0.55f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.55.output.txt", 0.55f, 100);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor065Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","size_33k_scaling_factor_0.65", 0.65f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.65.output.txt", 0.65f, 100);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor075Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","size_33k_scaling_factor_0.75", 0.75f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.75.output.txt", 0.75f, 100);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor085Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","size_33k_scaling_factor_0.85", 0.85f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.85.output.txt", 0.85f, 100);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor095Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","size_33k_scaling_factor_0.95", 0.95f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.95.output.txt", 0.95f, 100);
     }
 }
