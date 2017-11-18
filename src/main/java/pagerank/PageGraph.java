@@ -1,5 +1,7 @@
 package pagerank;
 
+import org.apache.commons.lang3.tuple.Pair;
+
 import java.util.*;
 
 public class PageGraph {
@@ -10,12 +12,12 @@ public class PageGraph {
         pages = new HashMap<>();
     }
 
-    public void build(List<String> links){
+    public void build(List<Pair<String, String>> links){
 
-        for (String link : links){
+        for (Pair<String, String> link : links){
 
-            String pageName = link.split(",")[0].trim();
-            String outboundPageName = link.split(",")[1].trim();
+            String pageName = link.getLeft();
+            String outboundPageName = link.getRight();
 
             if (!pages.containsKey(outboundPageName)){
                 Page outboundPage = new Page(outboundPageName);

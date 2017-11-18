@@ -1,9 +1,11 @@
 package pagerank;
 
 import org.apache.commons.lang3.time.StopWatch;
+import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,6 +24,7 @@ public class MainDriver {
     private int maxIterations;
 
     private List<String> links;
+    private List<Pair<String, String>> parsedLinks;
     private List<String> output;
 
     public static void main(String[] args) throws IOException {
@@ -54,25 +57,43 @@ public class MainDriver {
     }
 
     public void run(){
-        readFilesIntoMemory();
+        parseInputFile();
         buildPageGraph();
         runPageRank();
         createOutputFile(output);
     }
 
-    private void readFilesIntoMemory(){
+    private void parseInputFile(){
 
         StopWatch timer = new StopWatch();
         timer.start();
 
         links = FileUtils.fileToList(stringFile);
+        parsedLinks = new ArrayList<>();
+
+        for (String link : links){
+
+            String page1 = link.split(",")[0].trim();
+            String page2 = link.split(",")[1].trim();
+
+            Pair<String, String> pair = new ImmutablePair(page1, page2);
+            parsedLinks.add(pair);
+        }
 
         timer.stop();
-        System.out.println("Files reading time: " + timer.toString());
+        System.out.println("Input file parsing time: " + timer.toString());
     }
 
     private void buildPageGraph(){
-        pageGraph.build(links);
+
+        StopWatch timer = new StopWatch();
+        timer.start();
+
+        pageGraph.build(parsedLinks);
+
+        timer.stop();
+
+        System.out.println("Page Graph build time: " + timer.toString());
     }
 
     private void runPageRank(){
