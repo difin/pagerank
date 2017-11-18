@@ -41,17 +41,22 @@ public class InputGraphTypeTest {
 
     @Test
     public void inboundDegreeOneOutboundDegreeOneTest(){
-        runTest("data_files", "inbound_1_outbound_1" ,"input_graph_type_test_output",  "inbound_1_outbound_1.output.txt",0.85f, 100);
+        runTest("data_files", "inbound_1_outbound_1.txt" ,"input_graph_type_test_output",  "inbound_1_outbound_1.output.txt",0.85f, 100);
     }
 
     @Test
     public void allNodesAreDanglingTest(){
-        runTest("data_files", "all_nodes_dangling","input_graph_type_test_output",  "all_nodes_dangling.output.txt",0.85f, 100);
+        runTest("data_files", "all_nodes_dangling.txt","input_graph_type_test_output",  "all_nodes_dangling.output.txt",0.85f, 100);
     }
 
 
     @Test
     public void inboundDegreeNMinusOneOutboundDegreeMinusOneTest(){
-        runTest("data_files", "inbound_n-1_outbound_n-1","input_graph_type_test_output",  "inbound_n-1_outbound_n-1.output.txt",0.85f, 100);
+        runTest("data_files", "inbound_n-1_outbound_n-1.txt","input_graph_type_test_output",  "inbound_n-1_outbound_n-1.output.txt",0.85f, 100);
+    }
+
+    @Test
+    public void mixedInputTest(){
+        runTest("data_files", "mixed.txt","input_graph_type_test_output",  "mixed.output.txt",0.85f, 100);
     }
 }
