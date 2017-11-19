@@ -37,9 +37,7 @@ public class PageGraph {
 
         for (Page danglingPage : danglingPages){
             for (Page page : getPages()){
-                if (!danglingPage.getName().equals(page.getName())){
-                    danglingPage.addOutboundPage(page);
-                }
+                danglingPage.addOutboundPage(page);
             }
         }
     }
