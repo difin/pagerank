@@ -5,39 +5,39 @@ Running pagerank.ScalingFactorTest
 -------------------------------------------------------
 	Starting test: inputFileWith33kLinksScalingFactor055Test
 -------------------------------------------------------
-Input file parsing time: 00:00:00.295
-Page Graph build time: 00:00:06.642
-PageRank finished after 19 iterations; convergence time: 00:00:00.190
-Output file writing time: 00:00:00.790
+Input file parsing time: 00:00:00.343
+Page Graph build time: 00:00:07.249
+PageRank finished after 19 iterations; convergence time: 00:00:00.244
+Output file writing time: 00:00:00.947
 -------------------------------------------------------
 	Starting test: inputFileWith33kLinksScalingFactor065Test
 -------------------------------------------------------
-Input file parsing time: 00:00:00.223
-Page Graph build time: 00:00:05.619
-PageRank finished after 27 iterations; convergence time: 00:00:00.280
-Output file writing time: 00:00:00.362
+Input file parsing time: 00:00:00.254
+Page Graph build time: 00:00:06.692
+PageRank finished after 27 iterations; convergence time: 00:00:00.306
+Output file writing time: 00:00:00.366
 -------------------------------------------------------
 	Starting test: inputFileWith33kLinksScalingFactor075Test
 -------------------------------------------------------
-Input file parsing time: 00:00:00.101
-Page Graph build time: 00:00:03.689
-PageRank finished after 38 iterations; convergence time: 00:00:00.415
-Output file writing time: 00:00:00.530
+Input file parsing time: 00:00:00.128
+Page Graph build time: 00:00:04.058
+PageRank finished after 38 iterations; convergence time: 00:00:00.541
+Output file writing time: 00:00:00.623
 -------------------------------------------------------
 	Starting test: inputFileWith33kLinksScalingFactor085Test
 -------------------------------------------------------
-Input file parsing time: 00:00:00.130
-Page Graph build time: 00:00:05.711
-PageRank finished after 58 iterations; convergence time: 00:00:00.798
-Output file writing time: 00:00:00.403
+Input file parsing time: 00:00:00.132
+Page Graph build time: 00:00:07.685
+PageRank finished after 58 iterations; convergence time: 00:00:00.593
+Output file writing time: 00:00:00.316
 -------------------------------------------------------
 	Starting test: inputFileWith33kLinksScalingFactor095Test
 -------------------------------------------------------
-Input file parsing time: 00:00:00.159
-Page Graph build time: 00:00:04.491
-PageRank finished after 100 iterations; convergence time: 00:00:01.013
-Output file writing time: 00:00:00.665
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 32.605 sec - in pagerank.ScalingFactorTest
+Input file parsing time: 00:00:00.158
+Page Graph build time: 00:00:03.883
+PageRank finished after 100 iterations; convergence time: 00:00:01.145
+Output file writing time: 00:00:00.719
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.47 sec - in pagerank.ScalingFactorTest
 Running pagerank.InputGraphTypeTest
 -------------------------------------------------------
 	Starting test: mixedInputTest
@@ -59,7 +59,7 @@ Output file writing time: 00:00:00.000
 Input file parsing time: 00:00:00.000
 Page Graph build time: 00:00:00.000
 PageRank finished after 0 iterations; convergence time: 00:00:00.000
-Output file writing time: 00:00:00.001
+Output file writing time: 00:00:00.000
 -------------------------------------------------------
 	Starting test: inboundDegreeOneOutboundDegreeOneTest
 -------------------------------------------------------
@@ -67,30 +67,30 @@ Input file parsing time: 00:00:00.000
 Page Graph build time: 00:00:00.000
 PageRank finished after 0 iterations; convergence time: 00:00:00.000
 Output file writing time: 00:00:00.000
-Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec - in pagerank.InputGraphTypeTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 sec - in pagerank.InputGraphTypeTest
 Running pagerank.InputSizeTest
 -------------------------------------------------------
 	Starting test: inputFileWith33kLinksTest
 -------------------------------------------------------
-Input file parsing time: 00:00:00.112
-Page Graph build time: 00:00:03.650
-PageRank finished after 58 iterations; convergence time: 00:00:00.588
-Output file writing time: 00:00:01.007
+Input file parsing time: 00:00:00.188
+Page Graph build time: 00:00:05.416
+PageRank finished after 58 iterations; convergence time: 00:00:00.679
+Output file writing time: 00:00:00.420
 -------------------------------------------------------
 	Starting test: inputFileWith100kLinksTest
 -------------------------------------------------------
-Input file parsing time: 00:00:01.363
-Page Graph build time: 00:01:06.060
-PageRank finished after 61 iterations; convergence time: 00:00:02.030
-Output file writing time: 00:00:00.901
+Input file parsing time: 00:00:00.618
+Page Graph build time: 00:00:59.591
+PageRank finished after 61 iterations; convergence time: 00:00:02.618
+Output file writing time: 00:00:04.730
 -------------------------------------------------------
 	Starting test: inputFileWith67kLinksTest
 -------------------------------------------------------
-Input file parsing time: 00:00:00.273
-Page Graph build time: 00:00:25.226
-PageRank finished after 59 iterations; convergence time: 00:00:01.283
-Output file writing time: 00:00:00.857
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 103.337 sec - in pagerank.InputSizeTest
+Input file parsing time: 00:00:00.429
+Page Graph build time: 00:00:25.350
+PageRank finished after 59 iterations; convergence time: 00:00:01.630
+Output file writing time: 00:00:00.668
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 102.314 sec - in pagerank.InputSizeTest
 Running pagerank.ProvidedTestCasesTest
 -------------------------------------------------------
 	Starting test: testCase1
