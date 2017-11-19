@@ -31,14 +31,26 @@ Page Graph build time: 00:00:07.685
 PageRank finished after 58 iterations; convergence time: 00:00:00.593
 Output file writing time: 00:00:00.316
 -------------------------------------------------------
+	Starting test: inputFileWith33kLinksScalingFactor090Test
+-------------------------------------------------------
+Input file parsing time: 00:00:00.542
+Page Graph build time: 00:00:07.644
+PageRank finished after 82 iterations; convergence time: 00:00:00.691
+Output file writing time: 00:00:00.831
+-------------------------------------------------------
 	Starting test: inputFileWith33kLinksScalingFactor095Test
 -------------------------------------------------------
-Input file parsing time: 00:00:00.158
-Page Graph build time: 00:00:03.883
-PageRank finished after 100 iterations; convergence time: 00:00:01.145
-Output file writing time: 00:00:00.719
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 36.47 sec - in pagerank.ScalingFactorTest
-Running pagerank.InputGraphTypeTest
+Input file parsing time: 00:00:00.552
+Page Graph build time: 00:00:05.272
+PageRank finished after 100 iterations; convergence time: 00:00:00.871
+Output file writing time: 00:00:00.754
+-------------------------------------------------------
+	Starting test: inputFileWith33kLinksScalingFactor100Test
+-------------------------------------------------------
+Input file parsing time: 00:00:00.529
+Page Graph build time: 00:00:07.496
+PageRank finished after 100 iterations; convergence time: 00:00:00.807
+Output file writing time: 00:00:00.275
 -------------------------------------------------------
 	Starting test: mixedInputTest
 -------------------------------------------------------

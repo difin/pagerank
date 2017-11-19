@@ -60,7 +60,17 @@ public class ScalingFactorTest {
     }
 
     @Test
+    public void inputFileWith33kLinksScalingFactor090Test(){
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.90.output.txt", 0.90f, 100);
+    }
+
+    @Test
     public void inputFileWith33kLinksScalingFactor095Test(){
         runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.95.output.txt", 0.95f, 100);
+    }
+
+    @Test
+    public void inputFileWith33kLinksScalingFactor100Test(){
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_100.output.txt", 100f, 100);
     }
 }
