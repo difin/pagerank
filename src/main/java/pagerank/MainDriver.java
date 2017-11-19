@@ -28,17 +28,26 @@ public class MainDriver {
     private List<String> output;
 
     public static void main(String[] args) throws IOException {
-        MainDriver mainDriver = new MainDriver();
+
+        if (args.length != 2){
+            System.out.println("reguired parameters: \n\t1st: scaling factor\n\t2nd: max iterations");
+            return;
+        }
+
+        float scalingFactor = Float.parseFloat(args[0]);
+        int maxIterations = Integer.parseInt(args[1]);
+
+        MainDriver mainDriver = new MainDriver(scalingFactor, maxIterations);
         mainDriver.run();
     }
 
-    public MainDriver(){
+    public MainDriver(float scalingFactor, int maxIterations){
 
         pageGraph = new PageGraph();
         pageRank = new PageRank();
 
-        scalingFactor = 0.85f;
-        maxIterations = 20;
+        this.scalingFactor = scalingFactor;
+        this.maxIterations = maxIterations;
 
         stringFile = "links.txt";
         outputFile = "Output.txt";
