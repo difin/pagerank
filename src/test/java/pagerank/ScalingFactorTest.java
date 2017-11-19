@@ -41,36 +41,36 @@ public class ScalingFactorTest {
 
     @Test
     public void inputFileWith33kLinksScalingFactor055Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.55.output.txt", 0.55f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.55.output.txt", 0.55f, 1000);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor065Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.65.output.txt", 0.65f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.65.output.txt", 0.65f, 1000);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor075Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.75.output.txt", 0.75f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.75.output.txt", 0.75f, 1000);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor085Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.85.output.txt", 0.85f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.85.output.txt", 0.85f, 1000);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor090Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.90.output.txt", 0.90f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.90.output.txt", 0.90f, 1000);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor095Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.95.output.txt", 0.95f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_0.95.output.txt", 0.95f, 1000);
     }
 
     @Test
     public void inputFileWith33kLinksScalingFactor100Test(){
-        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_100.output.txt", 100f, 100);
+        runTest("data_files", "links.33k.avg.10.stdev.5.txt","scaling_factor_tests_output","size_33k_scaling_factor_100.output.txt", 100f, 1000);
     }
 }
